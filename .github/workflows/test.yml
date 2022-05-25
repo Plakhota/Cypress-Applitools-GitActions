@@ -21,12 +21,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Extract branch name
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        run: echo BRANCH_NAME="##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
       - name: Log  Git SHA
-        run: echo "$GITHUB_SHA"
+        run: echo GITHUB_SHA="$GITHUB_SHA"
+      - name: Log env
+        run: env
       - name: Log  "{{ github.event.pull_request.head.sha }}"
-        run: echo ${{ github }}
+        run: echo ${ github }
       - name: Prepare for push event
         run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=${APPLITOOLS_API_KEY}&CommitSha=${APPLITOOLS_BATCH_ID}&BranchName=${{ steps.extract_branch.outputs.branch }}"
       - name: Use Node.js
