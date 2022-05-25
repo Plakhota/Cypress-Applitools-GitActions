@@ -29,13 +29,13 @@ jobs:
         run: env
       - name: Log  "{{ github.event.pull_request.head.sha }}"
         run: echo ${{ github }}
-      - name: Prepare for push event
-        run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=${APPLITOOLS_API_KEY}&CommitSha=${APPLITOOLS_BATCH_ID}&BranchName=${{ steps.extract_branch.outputs.branch }}"
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
       - run: npm ci
+      - name: Prepare for push event
+        run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=${APPLITOOLS_API_KEY}&CommitSha=${APPLITOOLS_BATCH_ID}&BranchName=Plakhota/Cypress-Applitools-GitActions/${GITHUB_REF_NAME}"  
       - name: Run Tests
         run: npm run cypress:ci
         
