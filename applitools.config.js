@@ -14,7 +14,7 @@ module.exports = {
         {deviceName: 'Pixel 2', screenOrientation: 'portrait'}
     ],
     // set batch name to the configuration
-    batchName: 'Cypress-GitAcions',
+    batchName: process.env.APPLITOOLS_BATCH_NAME,
     batchId: process.env.APPLITOOLS_BATCH_ID
     
 }
