@@ -39,5 +39,5 @@ jobs:
       - name: Prepare for push event may be use BranchName=${GITHUB_REPOSITORY}/${GITHUB_HEAD_REF}
         run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=${APPLITOOLS_API_KEY}&CommitSha=${GITHUB_SHA}&BranchName=${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}"
       - name: Run Tests
-        run: npm run cypress:ci
+        run: echo "No run tests"
         
