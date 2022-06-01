@@ -37,7 +37,7 @@ jobs:
           node-version: '16.x'
       - run: npm ci
       - name: Prepare for push event
-        run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=${APPLITOOLS_API_KEY}&CommitSha=${GITHUB_SHA}&BranchName=${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}"#BranchName=${GITHUB_REPOSITORY}/${GITHUB_HEAD_REF}" ?   
+        run: echo "Not Prepare for push event" #curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=${APPLITOOLS_API_KEY}&CommitSha=${GITHUB_SHA}&BranchName=${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}"#BranchName=${GITHUB_REPOSITORY}/${GITHUB_HEAD_REF}" ?   
       - name: Run Tests
-        run: npm run cypress:ci
+        run: echo "Not Run" test #npm run cypress:ci
         
