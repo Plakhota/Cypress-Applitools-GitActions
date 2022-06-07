@@ -1,5 +1,3 @@
-dkjsdjfdk
-Update Readme
-After updating hook
+GitHub-Applitools integration demo with GitHub Actions
  
  
