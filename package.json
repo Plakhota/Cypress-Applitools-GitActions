@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@applitools/eyes-cypress": "latest",
+    "@applitools/eyes-cypress": "^3.26.1",
     "cypress": "latest"
   }
 }
