@@ -17,4 +17,5 @@ module.exports = {
     batchName: process.env.APPLITOOLS_BATCH_NAME,
     batchId: process.env.APPLITOOLS_BATCH_ID,
     dontCloseBatches: true,    
+    failCypressOnDiff: false,
 }
