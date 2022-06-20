@@ -14,7 +14,7 @@ env:
     APPLITOOLS_BATCH_NAME: ${{ github.ref }}
     APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+#A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   test-content:
     runs-on: ubuntu-latest
