@@ -33,5 +33,11 @@ describe("AppTest", () => {
         // Call Close on eyes to let the server know it should display the results
         cy.eyesClose()
     });
+  
+    after(() => {
+        cy.eyesGetAllTestResults().then(summary => {
+            console.log(summary)
+  })
+})
 
 });
