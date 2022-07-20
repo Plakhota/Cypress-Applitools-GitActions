@@ -20,15 +20,19 @@ describe("AppTest", () => {
             target: 'window',
             fully: true
         });
+        
+        cy.log("Log a line");
+        console.log("Log a line console");
 
-        cy.get('#log-in').click()
+
+      //  cy.get('#log-in').click()
 
         // Check the app page
-        cy.eyesCheckWindow({
-            tag: "App Window",
-            target: 'window',
-            fully: true
-        });
+        //cy.eyesCheckWindow({
+         //   tag: "App Window",
+        //    target: 'window',
+         //   fully: true
+       // });
 
         // Call Close on eyes to let the server know it should display the results
         cy.eyesClose()
