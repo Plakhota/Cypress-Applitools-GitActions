@@ -35,9 +35,9 @@ describe("AppTest", () => {
     });
   
     after(() => {
-        cy.eyesGetAllTestResults().then(summary => {
-            console.log(summary)
-  })
+        //cy.eyesGetAllTestResults().then(summary => {
+            console.log("After all")
+ // })
 })
 
 });
