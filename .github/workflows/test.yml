@@ -11,6 +11,7 @@ on:
         
 env:
     APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+    APPLITOOLS_API_KEY1: ${{ secrets.SECOND_TEAM_APPLITOOLS_API_KEY }}
     APPLITOOLS_BATCH_NAME: ${{ github.ref }}
     APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
 
@@ -41,7 +42,7 @@ jobs:
       - name: Run Tests
         run: npm run cypress:ci
       - name: Run Tests
-        run: APPLITOOLS_API_KEY=${{ secrets.SECOND_TEAM_APPLITOOLS_API_KEY }} npm run cypress:ci
+        run: APPLITOOLS_API_KEY=${APPLITOOLS_API_KEY1} npm run cypress:ci
       - name: Comlete GitHub check
         run: echo AutoCompleteEnabled#curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${APPLITOOLS_BATCH_ID}/complete?apiKey=${APPLITOOLS_API_KEY}"
         
