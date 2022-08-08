@@ -30,7 +30,7 @@ jobs:
         run: echo GITHUB_SHA="$GITHUB_SHA"
       - name: Log env
         run: env
-      - name: Log  "{{ github.event.pull_request.head.sha }}"
+      - name: Log  " {{ github.event.pull_request.head.sha }}"
         run: echo ${{ github }}
       - name: Use Node.js
         uses: actions/setup-node@v1
