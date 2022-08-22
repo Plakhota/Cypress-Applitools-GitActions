@@ -16,5 +16,6 @@ module.exports = {
     // set batch name to the configuration
     batchName: process.env.APPLITOOLS_BATCH_NAME,
     batchId: process.env.APPLITOOLS_BATCH_ID,
+    branchName: "FAUX_BRANCH_NAME",
    // dontCloseBatches: true,    
 }
