@@ -1,4 +1,5 @@
 module.exports = {
+    failCypressOnDiff: false,
     concurrency: 10,
     apiKey: process.env.APPLITOOLS_API_KEY,
     //
