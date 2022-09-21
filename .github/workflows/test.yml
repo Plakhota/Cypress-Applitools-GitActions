@@ -39,9 +39,9 @@ jobs:
       - run: npm ci
       - name: Prepare for push event may be use BranchName=${GITHUB_REPOSITORY}/${GITHUB_HEAD_REF}
         run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=${APPLITOOLS_API_KEY}&CommitSha=${GITHUB_SHA}&BranchName=${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}"
-      - name: Run Tests
+      - name: Run Tests in Applitools team
         run: npm run cypress:ci
-      - name: Run Tests
+      - name: Run Tests in Applitools1 team
         run: APPLITOOLS_API_KEY=${APPLITOOLS_API_KEY1} npm run cypress:ci
       - name: Comlete GitHub check
         run: echo AutoCompleteEnabled#curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${APPLITOOLS_BATCH_ID}/complete?apiKey=${APPLITOOLS_API_KEY}"
