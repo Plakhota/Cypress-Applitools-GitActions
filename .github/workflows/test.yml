@@ -42,7 +42,7 @@ jobs:
       - name: Run Tests in Applitools team
         run: echo nothing#npm run cypress:ci
       - name: Run Tests in Applitools1 team
-        run: APPLITOOLS_API_KEY=${APPLITOOLS_API_KEY1} npm run cypress:ci
+        run: echo nothing#APPLITOOLS_API_KEY=${APPLITOOLS_API_KEY1} npm run cypress:ci
       - name: Comlete GitHub check
         run: echo AutoCompleteEnabled#curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${APPLITOOLS_BATCH_ID}/complete?apiKey=${APPLITOOLS_API_KEY}"
         
