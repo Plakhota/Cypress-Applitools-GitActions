@@ -20,6 +20,8 @@ describe("AppTest", () => {
             target: 'window',
             fully: true
         });
+        cy.log('cy.log');
+        comsole.log('comsole.log');
 
         cy.get('#log-in').click()
 
