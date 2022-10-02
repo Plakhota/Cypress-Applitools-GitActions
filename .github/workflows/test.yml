@@ -41,8 +41,10 @@ jobs:
         run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=${APPLITOOLS_API_KEY}&CommitSha=${GITHUB_SHA}&BranchName=${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}"
       - name: Run Tests in Applitools team
         run: echo nothing#npm run cypress:ci
+      - name: Comlete GitHub check Applitools
+        run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${APPLITOOLS_BATCH_ID}/complete?apiKey=${APPLITOOLS_API_KEY}"
       - name: Run Tests in Applitools1 team
         run: echo nothing#APPLITOOLS_API_KEY=${APPLITOOLS_API_KEY1} npm run cypress:ci
-      - name: Comlete GitHub check
-        run: echo AutoCompleteEnabled#curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${APPLITOOLS_BATCH_ID}/complete?apiKey=${APPLITOOLS_API_KEY}"
+      - name: Comlete GitHub check Applitools1
+        run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${APPLITOOLS_BATCH_ID}/complete?apiKey=${APPLITOOLS_API_KEY1}"
         
