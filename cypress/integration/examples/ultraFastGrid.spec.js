@@ -7,7 +7,7 @@ describe("AppTest", () => {
         // (for the 2nd run)
         cy.visit('https://demo.applitools.com');
 
-        // Call Open on eyes to initialize a test session
+        // Call Open on eyes to initialize a test session 
         cy.eyesOpen({
             appName: 'Demo App',
             testName: 'Ultrafast grid demo',
