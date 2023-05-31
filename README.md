@@ -1,1 +1,1 @@
-GitHub-Applitools integration demo with GitHub Actions
+GitHub-Applitools integration demo with GitHub Actions 
