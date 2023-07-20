@@ -42,5 +42,7 @@ jobs:
       - name: Run Tests
         run: echo pass-test #npm run cypress:ci
       - name: Comlete GitHub check
-        run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${APPLITOOLS_BATCH_ID}/complete?apiKey=${APPLITOOLS_API_KEY}"
+        run: |
+            echo APPLITOOLS_BATCH_ID=$APPLITOOLS_BATCH_ID
+            curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${APPLITOOLS_BATCH_ID}/complete?apiKey=${APPLITOOLS_API_KEY}"
         
