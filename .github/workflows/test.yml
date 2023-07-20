@@ -38,7 +38,7 @@ jobs:
           node-version: '16.x'
       - run: echo pass-npm-ci #npm ci
       - name: Prepare for push event may be use BranchName=${GITHUB_REPOSITORY}/${GITHUB_HEAD_REF}
-        run: curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=${APPLITOOLS_API_KEY}&CommitSha=${GITHUB_SHA}&BranchName=${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}"
+        run: echo pass commit-push #curl -v -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=${APPLITOOLS_API_KEY}&CommitSha=${GITHUB_SHA}&BranchName=${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}"
       - name: Run Tests
         run: echo pass-test #npm run cypress:ci
       - name: Comlete GitHub check
